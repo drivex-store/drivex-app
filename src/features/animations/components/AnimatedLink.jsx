@@ -11,11 +11,9 @@ export const AnimatedLink = forwardRef(function AnimatedLink(props, ref) {
     ...restProps
   } = props;
 
-  
   const Component = asChild ? Slot : "a";
   const displayClass = indicator ? "inline-flex items-center" : "inline-block";
 
-  
   const combinedClassName = cx(
     "group relative w-fit cursor-pointer",
     displayClass,
@@ -86,9 +84,7 @@ export const AnimatedLink = forwardRef(function AnimatedLink(props, ref) {
 
   return (
     <Component ref={ref} className={combinedClassName} {...restProps}>
-      <Slottable asChild={asChild} child={children}>
-        {renderChildren}
-      </Slottable>
+      {renderChildren(children)}
     </Component>
   );
 });
