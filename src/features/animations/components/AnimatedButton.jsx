@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useRef } from 'react';
-import { Slot } from '@radix-ui/react-slot';
+import { Slot, Slottable } from '@radix-ui/react-slot';
 import { cva, cx } from '@libs/vendor';
 import useDualLayerScramble from '@animations/hooks/useDualLayerScramble';
 
@@ -186,7 +186,9 @@ export function AnimatedButton(props) {
       onMouseLeave={handleMouseLeave}
       {...rest}
     >
-      {renderContent(children)}
+      <Slottable asChild={asChild} child={children}>
+        {renderContent}
+      </Slottable>
     </Comp>
   );
 }
