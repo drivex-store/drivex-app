@@ -1,0 +1,22 @@
+{
+  "name": "sanity-studio",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "sanity dev",
+    "start": "sanity dev",
+    "build": "sanity build",
+    "deploy": "sanity deploy"
+  },
+  "dependencies": {
+    "@sanity/vision": "^6.10.1",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "sanity": "^6.10.1",
+    "sanity-plugin-mux-input": "^5.0.12",
+    "styled-components": "^6.5.3"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}

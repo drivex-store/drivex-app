@@ -1,0 +1,66 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "jsx": "preserve",
+    "allowJs": true,
+    "checkJs": false,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ],
+      "@root/*": [
+        "./*"
+      ],
+      "env": [
+        "./env.mjs"
+      ],
+      "@app/*": [
+        "./src/app/*"
+      ],
+      "@providers/*": [
+        "./src/providers/*"
+      ],
+      "@features/*": [
+        "./src/features/*"
+      ],
+      "@modules/*": [
+        "./src/modules/*"
+      ],
+      "@shared/*": [
+        "./src/shared/*"
+      ],
+      "@libs/*": [
+        "./src/libs/*"
+      ],
+      "@hooks/*": [
+        "./src/libs/hooks/*"
+      ],
+      "@components/*": [
+        "./src/components/*"
+      ],
+      "@animations/*": [
+        "./src/features/animations/*"
+      ],
+      "@views/*": [
+        "./src/modules/views/*"
+      ]
+    }
+  },
+  "include": [
+    "src/**/*",
+    "sanity.config.js",
+    "next.config.mjs",
+    "env.mjs"
+  ],
+  "exclude": [
+    "node_modules",
+    ".next",
+    "__MACOSX",
+    "public"
+  ]
+}
