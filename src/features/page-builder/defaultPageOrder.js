@@ -1,0 +1,36 @@
+export const defaultPageOrder = {
+  home: [
+    { sectionType: "heroSection" },
+    { sectionType: "cardsSection" },
+    { sectionType: "animatedListSection" },
+    { sectionType: "featuredWorkSection" },
+    { sectionType: "indexedGridSection" },
+    { sectionType: "accordionSection" },
+    {
+      sectionType: "contentBlockSection",
+      contentBlockId: "contentBlockSection-contact-cta",
+    },
+  ],
+  about: [
+    { sectionType: "aboutHero" },
+    { sectionType: "logoSection" },
+    { sectionType: "storySection" },
+  ],
+  work: [
+    { sectionType: "work-hero" },
+    { sectionType: "workSliderSection" },
+  ],
+  pricing: [
+    { sectionType: "pricing-hero" },
+    { sectionType: "pricingLogoSection" },
+    { sectionType: "pricingCardsSection" },
+    { sectionType: "servicesListSection" },
+    {
+      sectionType: "contentBlockSection",
+      contentBlockId: "contentBlockSection-contact-cta",
+    },
+  ],
+  contact: [
+  { sectionType: "contact-hero" },
+ ],
+};
