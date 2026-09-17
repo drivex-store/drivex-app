@@ -9,6 +9,7 @@ import { FormHoneypot } from '@/features/newsletters/forms/FormHoneypot';
 import { useSpamPrevention } from '@/features/newsletters/hooks/useSpamPrevention'; 
 import { trackLinkedInConversion, LI_CONVERSION_CTA_CLICK } from '@/libs/analytics/components/linkedinTracking'; 
 import { CalBookingModal } from '@/components/ui/CalBookingModal'; 
+import { SellAccountForm } from '@/components/ui/SellAccountForm';
 import { useModal } from '@/libs/hooks/useModal'; 
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -267,6 +268,7 @@ function AuditForm() {
   );
 }
 
+
 function CalBookingWrapper({ variant }) {
   useEffect(() => {
     trackBookingFlowStarted();
@@ -276,6 +278,7 @@ function CalBookingWrapper({ variant }) {
 
   return <CalBookingModal visible={true} />;
 }
+
 
 function PreloadCalModal({ onReady }) {
   const [ready, setReady] = useState(false);
@@ -381,6 +384,7 @@ export function ModalOverlay() {
   if (!mounted) return null;
 
   const preloadCalElement = !calReady && <PreloadCalModal onReady={handleCalReady} />;
+
   const modalContent = isOpen && (
     <div ref={modalRef} role="dialog" aria-modal="true" aria-labelledby="modal-title" className="fixed inset-0 z-[9998]">
       <motion.button
@@ -405,7 +409,9 @@ export function ModalOverlay() {
           <div className="px-24 pt-24">
             <div className="flex items-start justify-between">
               <h2 id="modal-title" className="text-h3">
-                {modalId === "site-audit" ? "Free Site Audit" : "Book a Call"}
+                {modalId === "site-audit" && "Free Site Audit"}
+                {modalId === "sell-account" && "Sell Your Account"}
+                {modalId !== "site-audit" && modalId !== "sell-account" && "Book a Call"}
               </h2>
               <motion.button
                 type="button"
@@ -433,12 +439,18 @@ export function ModalOverlay() {
             </div>
             {modalId === "site-audit" && (
               <p className="mt-8 text-body text-foreground-muted">
-                Enter your details and we'll send you a free audit of your website shortly.
+                Enter your details and We&apos;ll send you a free audit of your website shortly.
+              </p>
+            )}
+            {modalId === "sell-account" && (
+              <p className="mt-8 text-body text-foreground-muted">
+                Tell us about the account. Our team reviews every listing before it goes live.
               </p>
             )}
           </div>
           <div className="min-h-0 flex-1 overflow-auto px-24 py-24">
             {modalId === "site-audit" && <AuditForm />}
+            {modalId === "sell-account" && <SellAccountForm />}
             {(modalId && modalId in CAL_VARIANTS) && <CalBookingWrapper variant={CAL_VARIANTS[modalId]} />}
           </div>
         </motion.div>
