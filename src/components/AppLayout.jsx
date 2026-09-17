@@ -1,3 +1,4 @@
+import { ModalOverlay } from '@components/ui/ModalOverlay'; 
 import { Preloader } from '@animations/utils/pageLoader';
 import { HeaderClient } from '@components/layout/HeaderClient';
 import { FooterClient } from '@components/layout/FooterClient';
@@ -79,6 +80,7 @@ export default async function AppLayout({ children }) {
         />
         <NewsletterPopupClient />
       </LazyCustomCursor>
+      <ModalOverlay />
     </>
   );
 }

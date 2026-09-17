@@ -5,9 +5,7 @@ import { getServicesListSectionData } from "@modules/sanity/queries/PricingPage/
 
 export default async function ServicesListSection() {
   const data = await getServicesListSectionData();
-
   if (!data?.items?.length) return null;
-
   const { theme, headline, label, media, items } = data;
 
   return (
@@ -30,7 +28,6 @@ export default async function ServicesListSection() {
                 )}
                 {label && <p className="section-label">{label}</p>}
               </div>
-
               {media && (
                 <div className="max-lg:!max-w-full w-full h-full">
                   <div className="overflow-hidden h-full" style={{ aspectRatio: "1/1" }}>
@@ -40,10 +37,9 @@ export default async function ServicesListSection() {
               )}
             </div>
           </div>
-
           <div className="grid-span-12 lg:grid-span-5 lg:grid-start-7 ">
             <div className="flex h-full flex-col justify-end items-start gap-16">
-              <List items={items} className="w-full" />
+              <List items={items} className="w-full" animated pushEffect />
             </div>
           </div>
         </div>
