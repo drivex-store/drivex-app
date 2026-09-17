@@ -13,14 +13,14 @@ export default {
         {
           name: "label",
           title: "Label",
-          description: "Small eyebrow label, e.g. \"// Services\"",
+          description: 'Small eyebrow label, e.g. "// Services"',
           type: "string",
         },
         { name: "media", title: "Image", type: "media" },
         {
           name: "items",
           title: "Service items",
-          description: "Each item renders as one line in the list, e.g. \"Custom frontend build, end to end\"",
+          description: 'Each item renders as one line in the list, e.g. "Custom frontend build, end to end"',
           type: "array",
           of: [
             {
@@ -31,6 +31,18 @@ export default {
             },
           ],
         },
+        {
+          name: "animated",
+          title: "Animated",
+          type: "boolean",
+          initialValue: true,
+        },
+        {
+          name: "pushEffect",
+          title: "Push Effect",
+          type: "boolean",
+          initialValue: true,
+        }
       ],
     },
   ],

@@ -27,7 +27,8 @@ const SERVICES_LIST_QUERY = `*[_type == "servicesListSection"][0]{
   "headline": content.headline{ level, text },
   "label": content.label,
   "media": content.media${mediaProjection},
-  "items": content.items[]{ text }
+  "items": content.servicesList.items[]{ text },
+  "options": content.servicesList.options{ animated, pushEffect }
 }`;
 
 export async function getServicesListSectionData() {
