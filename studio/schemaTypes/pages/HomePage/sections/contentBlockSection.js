@@ -19,9 +19,12 @@ export default {
         {
           name: "mediaSize",
           title: "Media size",
-          description: "Compact: narrow column, cropped to 16:9. Wide: wider column, natural aspect ratio (no crop).",
+          description:
+            "Compact: narrow column (span-3), cropped to 16:9, divider shown above body text. " +
+            "Wide: wider column (span-4), natural aspect ratio (no crop), divider shown above body text. " +
+            "Large: half-width column (span-6), cropped to 16:9, no divider -- for the \"Start a project\" style contact CTA.",
           type: "string",
-          options: { list: ["compact", "wide"] },
+          options: { list: ["compact", "wide", "large"] },
           initialValue: "compact",
         },
         { name: "text", title: "Rich text", type: "richText" },

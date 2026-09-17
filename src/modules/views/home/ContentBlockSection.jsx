@@ -1,4 +1,3 @@
-
 import { cx } from '@libs/vendor';
 import { ScrollAnimatedHeadline } from "@animations/components/ScrollAnimatedHeadline";
 import { SanityMedia } from "@modules/sanity/components/SanityMedia";
@@ -26,22 +25,9 @@ export default function ContentBlockSection({ data }) {
 
   const mediaFirst = layout !== "mediaRight";
   const isWide = mediaSize === "wide";
-
   const mediaColumn = media ? (
-    <div
-      className={
-        isWide
-          ? "grid-span-12 lg:grid-span-4 lg:grid-start-2 "
-          : "grid-span-12 lg:grid-span-3 lg:grid-start-2 "
-      }
-    >
-      <div
-        className={
-          isWide
-            ? "flex h-full flex-col justify-between items-start gap-80"
-            : "flex h-full flex-col justify-between items-start gap-16"
-        }
-      >
+    <div className="grid-span-12 lg:grid-span-6 lg:grid-start-1 ">
+      <div className="flex h-full flex-col justify-start items-start gap-80">
         <div>
           <ScrollAnimatedHeadline
             headline={{ level: headline?.level || "h2", text: headline?.text }}
@@ -66,19 +52,13 @@ export default function ContentBlockSection({ data }) {
   ) : null;
 
   const textColumn = (
-    <div className="grid-span-12 lg:grid-span-5 lg:grid-start-7 ">
-      <div className="flex h-full flex-col justify-start items-start gap-32">
+    <div className="grid-span-12 lg:grid-span-4 lg:grid-start-8 ">
+      <div className="flex h-full flex-col justify-between items-start gap-16">
         {secondaryHeadline?.text && (
           <div>
             <ScrollAnimatedHeadline
               headline={{ level: secondaryHeadline.level || "h3", text: secondaryHeadline.text }}
             />
-          </div>
-        )}
-
-        {secondaryHeadline?.text && text && (
-          <div className="w-full pt-32 lg:pt-64 pb-32 lg:pb-64">
-            <hr className="w-full border-border border-t" />
           </div>
         )}
 

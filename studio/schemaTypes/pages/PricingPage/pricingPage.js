@@ -25,6 +25,9 @@ export default {
                   { title: "Pricing cards", value: "pricingCardsSection" },
                   { title: "Content block", value: "contentBlockSection" },
                   { title: "Services list", value: "servicesListSection" },
+                  { title: "Table section", value: "tableSection" },
+                  { title: "Pricing FAQ", value: "pricingFaqSection" },
+
                 ],
               },
               validation: (Rule) => Rule.required(),

@@ -18,6 +18,8 @@ import PricingHeroSection from "@views/pricing/HeroSection";
 import PricingLogoSection from "@views/pricing/LogoSection";
 import PricingCardsSection from "@views/pricing/PricingCardsSection";
 import ServicesListSection from "@views/pricing/ServicesListSection";
+import TableSection from "@views/pricing/TableSection";
+import PricingFaqSection from "@views/pricing/PricingFaqSection";
 
 import ContactHeroSection from "@views/contact/HeroSection";
 
@@ -40,4 +42,7 @@ export const sectionRegistry = {
   "contact-hero": ContactHeroSection,
   pricingCardsSection: PricingCardsSection,
   servicesListSection: ServicesListSection,
+  tableSection: TableSection,
+  pricingFaqSection: PricingFaqSection,
+
 };

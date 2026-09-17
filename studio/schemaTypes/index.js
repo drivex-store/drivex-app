@@ -41,6 +41,9 @@ import pricingHero from "./pages/PricingPage/sections/pricingHero";
 import logoSection from "./pages/PricingPage/sections/logoSection";
 import pricingCardsSection from "./pages/PricingPage/sections/pricingCardsSection";
 import servicesListSection from "./pages/PricingPage/sections/servicesListSection";
+import tableSection from "./pages/PricingPage/sections/tableSection";
+import pricingFaqSection from "./pages/PricingPage/sections/pricingFaqSection";
+
 
 // --- Contact page ---
 import contactPage from "./pages/ContactPage/contactPage";
@@ -93,6 +96,8 @@ export const schemaTypes = [
   logoSection,
   pricingCardsSection,
   servicesListSection,
+  tableSection,
+  pricingFaqSection,
 
   // contact page
   contactPage,

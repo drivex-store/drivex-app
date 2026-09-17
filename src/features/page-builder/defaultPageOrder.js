@@ -25,10 +25,8 @@ export const defaultPageOrder = {
     { sectionType: "pricingLogoSection" },
     { sectionType: "pricingCardsSection" },
     { sectionType: "servicesListSection" },
-    {
-      sectionType: "contentBlockSection",
-      contentBlockId: "contentBlockSection-contact-cta",
-    },
+    { sectionType: "tableSection" },
+    { sectionType: "pricingFaqSection" },
   ],
   contact: [
   { sectionType: "contact-hero" },
