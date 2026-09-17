@@ -1,6 +1,4 @@
-// File location: src/modules/views/pricing/PricingFaqSection.jsx
 import { ScrollAnimatedHeadline } from "@animations/components/ScrollAnimatedHeadline";
-// Reusing the existing client component as-is — only the data source is new
 import AccordionClient from "@views/components/AccordionClient";
 import { getPricingFaqSectionData } from "@modules/sanity/queries/PricingPage/PricingFaqSectionData";
 

@@ -11,28 +11,32 @@ export const defaultPageOrder = {
       contentBlockId: "contentBlockSection-contact-cta",
     },
   ],
+
   about: [
     { sectionType: "aboutHero" },
     { sectionType: "logoSection" },
     { sectionType: "storySection" },
   ],
+
   work: [
     { sectionType: "work-hero" },
     { sectionType: "workSliderSection" },
   ],
-pricing: [
-  { sectionType: "pricing-hero" },
-  { sectionType: "pricingLogoSection" },
-  { sectionType: "pricingCardsSection" },
-  { sectionType: "servicesListSection" },
-  { sectionType: "tableSection" },
-  { sectionType: "pricingFaqSection" },
-  {
-    sectionType: "contentBlockSection",
-    contentBlockId: "contentBlockSection-pricing-cta",
-  },
-],
+
+  pricing: [
+    { sectionType: "pricing-hero" },
+    { sectionType: "pricingLogoSection" },
+    { sectionType: "pricingCardsSection" },
+    { sectionType: "servicesListSection" },
+    { sectionType: "tableSection" },
+    { sectionType: "pricingFaqSection" },
+    {
+      sectionType: "contentBlockSection",
+      contentBlockId: "contentBlockSection-pricing-cta",
+    },
+  ],
+
   contact: [
-  { sectionType: "contact-hero" },
- ],
+    { sectionType: "contact-hero" },
+  ],
 };

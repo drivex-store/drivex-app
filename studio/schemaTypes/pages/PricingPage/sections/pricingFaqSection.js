@@ -1,4 +1,3 @@
-// File location: studio/schemaTypes/pages/PricingPage/sections/pricingFaqSection.js
 export default {
   name: "pricingFaqSection",
   title: "Pricing FAQ Section",

@@ -31,12 +31,15 @@ export const sectionRegistry = {
   indexedGridSection: IndexedGridSection,
   accordionSection: AccordionSection,
   contentBlockSection: ContentBlockSection,
+  
   aboutHero: AboutHeroSection,
   logoSection: LogoSection,
   storySection: StorySection,
+  
   "work-hero": WorkHeroSection,
   workSliderSection: WorkSliderSection,
   mediaSection: MediaSection,
+  
   "pricing-hero": PricingHeroSection,
   pricingLogoSection: PricingLogoSection,
   "contact-hero": ContactHeroSection,
@@ -44,5 +47,4 @@ export const sectionRegistry = {
   servicesListSection: ServicesListSection,
   tableSection: TableSection,
   pricingFaqSection: PricingFaqSection,
-
 };
