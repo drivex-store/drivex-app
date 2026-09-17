@@ -2,20 +2,14 @@ import { sanityClient } from "@modules/sanity/client";
 
 const PRICING_FAQ_QUERY = `*[_type == "pricingFaqSection"][0]{
   theme,
-  pageBuilderSection,
-  className,
-  content{
-    "headline": headline{
-      level,
-      text
-    },
-    text,
-    allowMultiple,
-    "items": items[]{
-      _key,
-      headline,
-      text
-    }
+  "headline": headline{
+    level,
+    text
+  },
+  "items": items[]{
+    _key,
+    headline,
+    text
   }
 }`;
 
