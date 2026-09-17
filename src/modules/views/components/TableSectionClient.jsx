@@ -1,5 +1,4 @@
-"use client"⁠
-
+"use client";
 import { useRef } from "react"; 
 import { gsap, ScrollTrigger } from "@libs/vendor";
 import { useIdleGSAP } from "@hooks/useIdleGSAP"; 
