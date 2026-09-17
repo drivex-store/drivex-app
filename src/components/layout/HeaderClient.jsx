@@ -303,7 +303,7 @@ export function HeaderClient({
                   <AnimatedButton
                     size="sm"
                     theme="brand"
-                    onClick={() => openModal("cal-booking")}
+                    onClick={() => openModal("sell-account")}
                   >
                     {headerCta.text}
                   </AnimatedButton>
