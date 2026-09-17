@@ -3,9 +3,12 @@ import { ScrollAnimatedHeadline } from "@animations/components/ScrollAnimatedHea
 import { SanityMedia } from "@modules/sanity/components/SanityMedia";
 import { SanityRichText } from "@modules/sanity/components/SanityRichText";
 import { SanityButton } from "@modules/sanity/components/SanityButton";
+import { getContentBlockSectionData } from "@modules/sanity/queries/ContentBlockSectionData";
 
-export default function ContentBlockSection({ data }) {
-  if (!data) return null;
+export default async function ContentBlockSection({ id, data }) {
+  const resolvedData = data ?? (id ? await getContentBlockSectionData(id) : null);
+
+  if (!resolvedData) return null;
 
   const {
     theme,
@@ -21,7 +24,7 @@ export default function ContentBlockSection({ data }) {
     primaryCta,
     secondaryCta,
     footnote,
-  } = data;
+  } = resolvedData;
 
   const mediaFirst = layout !== "mediaRight";
   const isWide = mediaSize === "wide";
@@ -83,7 +86,7 @@ export default function ContentBlockSection({ data }) {
           </div>
         )}
 
-        {footnote && <p className="!text-foreground">{footnote}</p>}
+        {footnote && <p className="section-label !text-foreground">{footnote}</p>}
       </div>
     </div>
   );

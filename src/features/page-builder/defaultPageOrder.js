@@ -20,14 +20,18 @@ export const defaultPageOrder = {
     { sectionType: "work-hero" },
     { sectionType: "workSliderSection" },
   ],
-  pricing: [
-    { sectionType: "pricing-hero" },
-    { sectionType: "pricingLogoSection" },
-    { sectionType: "pricingCardsSection" },
-    { sectionType: "servicesListSection" },
-    { sectionType: "tableSection" },
-    { sectionType: "pricingFaqSection" },
-  ],
+pricing: [
+  { sectionType: "pricing-hero" },
+  { sectionType: "pricingLogoSection" },
+  { sectionType: "pricingCardsSection" },
+  { sectionType: "servicesListSection" },
+  { sectionType: "tableSection" },
+  { sectionType: "pricingFaqSection" },
+  {
+    sectionType: "contentBlockSection",
+    contentBlockId: "contentBlockSection-pricing-cta",
+  },
+],
   contact: [
   { sectionType: "contact-hero" },
  ],

@@ -23,10 +23,10 @@ export default {
                   { title: "Pricing hero", value: "pricing-hero" },
                   { title: "Logo section", value: "pricingLogoSection" },
                   { title: "Pricing cards", value: "pricingCardsSection" },
-                  { title: "Content block", value: "contentBlockSection" },
                   { title: "Services list", value: "servicesListSection" },
                   { title: "Table section", value: "tableSection" },
                   { title: "Pricing FAQ", value: "pricingFaqSection" },
+                  { title: "Content block", value: "contentBlockSection" },
 
                 ],
               },
